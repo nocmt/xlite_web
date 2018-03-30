@@ -25,7 +25,7 @@ SECRET_KEY = '@fubo)utym%g2hofq9o^o95%qeb(47yo#_98016=!da*kgi9a!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['x.nocmt.com',]
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 CRONJOBS = [
-    ('*/2 * * * *', 'basic.robot.main')
+    ('*/30 * * * *', 'basic.robot.main')
 ]
 
 MIDDLEWARE = [
