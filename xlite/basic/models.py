@@ -11,6 +11,7 @@ class Articles(models.Model):
     created_time = models.DateTimeField(default=timezone.now, verbose_name="时间")
 
     class Meta:
+        ordering = ['-created_time']
         verbose_name = '文章'
         verbose_name_plural = verbose_name
 
