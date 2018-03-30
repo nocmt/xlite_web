@@ -36,7 +36,7 @@ def getArticles(url):
             if cover:
                 cover = cover[0]
             else:
-                cover = '/static/baisc/img/1.jpg'
+                cover = '/static/basic/img/1.jpg'
             try:
                 Articles(title=title,body=body,cover=cover).save()
             except:
