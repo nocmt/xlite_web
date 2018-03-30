@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="nocmt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>XLite - 了解当下·发现未知</title>
+    <link rel="stylesheet" href="{% static 'basic/css/reset.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/index.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/media.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/light.css' %}?v=1.0">
+</head>
+
+<body>
+    <main class="i-article-box">
+        <!-- <h1 class="i-article i-title">了解当下·发现未知</h1> -->
+        {% for article in articles %}
+        <div class="i-article">
+            <img class="i-article-cover e-shadow" src="{{ article.cover }}"
+                alt="{{ article.title }}">
+            <a href="{{ article.get_absolute_url }}" class="i-article-info e-shadow">
+                <!-- 字数限制：30 -->
+                <p class="i-article-title">{{ article.title }}</p>
+                <p class="i-article-time">{{ article.created_time.year }}年{{ article.created_time.month }}月{{ article.created_time.day }}日</p>
+            </a>
+        </div>
+        {% empty %}
+            <p>暂时没有文章</p>
+        {% endfor %}
+        {% if is_paginated %}
+        <div class="i-article next-page">
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" title="下一页">...</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

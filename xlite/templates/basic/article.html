@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="nocmt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ article.title }} - XLite</title>
+    <link rel="stylesheet" href="{% static 'basic/css/typo.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/article.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/media.css' %}?v=1.0">
+    <link rel="stylesheet" href="{% static 'basic/css/light.css' %}?v=1.0">
+</head>
+<body>
+        <main class="article">
+            <h1 class="article-title">{{ article.title }}</h1>
+            <p class="article-time">{{ article.created_time.year }}年{{ article.created_time.month }}月{{ article.created_time.day }}日</p>
+            <!-- <img class="article-cover" src="{{ article.cover }}" alt="{{ article.title }}"> -->
+            <div class="article-content">
+                {{ article.body|safe }}
+            </div>
+    </main>
+</body>
+</html>

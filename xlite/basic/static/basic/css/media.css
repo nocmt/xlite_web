@@ -1,0 +1,47 @@
+/* media */
+
+/* 窗口宽度<960,设计宽度=768 */
+@media screen and (max-width:959px){
+    .i-article-box {
+        width: 56%;
+    }
+    .article {
+        width: 80%;
+        margin: 40px auto;
+    }
+}
+/* 窗口宽度<768,设计宽度=640 */
+@media screen and (max-width:767px){
+    .i-article-box {
+        width: 72%;
+    }
+    .article {
+        width: 80%;
+    }
+}
+/* 窗口宽度<640,设计宽度=480 */
+@media screen and (max-width:639px){
+    .i-article-box {
+        width: 86%;
+    }
+    .article {
+        width: 86%;
+    }
+}
+/* 窗口宽度<480,设计宽度=320 */
+@media screen and (max-width:479px){
+    .i-article-box {
+        width: 96%;
+        margin: 40px auto;
+    }
+    .i-article-cover {
+        width: 22%;
+    }
+    .i-article-info {
+        width: 77%;
+    }
+    .article {
+        width: 88%;
+        margin: 40px auto;
+    }
+}

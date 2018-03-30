@@ -1,0 +1,23 @@
+.article{
+    width: 50%;
+    padding: 16px;
+    margin: 60px auto;
+    box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+.article-title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.article-time {
+    font-size: 0.7rem;
+    margin: 8px 0  8px 4px;
+}
+.article-cover{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
