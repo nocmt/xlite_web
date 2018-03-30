@@ -27,13 +27,15 @@ def getArticles(url):
     items = SOUP.find_all('item')
     for item in items:
         title = item.find('title').text
-        if  Articles.object.filter(title=title):
+        if  Articles.objects.filter(title=title):
             continue
         else:
             body = bleach.linkify(str(item.find('description')))
             body = re.sub(r'(<description>)|(</description>)|(]]&gt;\n)', '', body)[25:]
-            cover = re.findall(r'<img.*src="(.*?)"', body, re.I)[0]
-            if not cover:
+            cover = re.findall(r'<img.*src="(.*?)"', body, re.I)
+            if cover:
+                cover = cover[0]
+            else:
                 cover = '/static/baisc/img/1.jpg'
             try:
                 Articles(title=title,body=body,cover=cover).save()

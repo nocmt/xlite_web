@@ -25,7 +25,7 @@ SECRET_KEY = '@fubo)utym%g2hofq9o^o95%qeb(47yo#_98016=!da*kgi9a!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['x.nocmt.com',]
+ALLOWED_HOSTS = []
 
 
 # Application definition
